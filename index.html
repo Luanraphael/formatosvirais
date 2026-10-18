@@ -1,0 +1,1795 @@
+<title>Formatos Virais Exemplos</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&family=DM+Sans:wght@400;500;700&display=swap"
+  rel="stylesheet"
+/>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: {
+          nunito: ['Nunito', 'sans-serif'],
+          dmsans: ['DM Sans', 'sans-serif'],
+        },
+      },
+    },
+  };
+</script>
+<style>
+  :root {
+    --clay-bg: #f6f1ea;
+    --clay-surface: #fffdfa;
+    --clay-ink: #332f3a;
+    --clay-ink-soft: #635f69;
+    --clay-grad-1: #7c6cf0;
+    --clay-grad-2: #ff6b9d;
+    --clay-shadow-color: 27, 20, 48;
+  }
+
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
+  body {
+    background: var(--clay-bg);
+    color: var(--clay-ink);
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  .font-nunito {
+    font-family: 'Nunito', sans-serif;
+  }
+
+  .text-clay-ink {
+    color: var(--clay-ink);
+  }
+
+  .text-clay-ink-soft {
+    color: var(--clay-ink-soft);
+  }
+
+  .clay-gradient-text {
+    background-image: linear-gradient(100deg, var(--clay-grad-1), var(--clay-grad-2));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  /* --- 4-layer clay shadows --- */
+  .shadow-clay {
+    box-shadow:
+      0 1px 2px rgba(var(--clay-shadow-color), 0.06),
+      0 6px 12px rgba(var(--clay-shadow-color), 0.08),
+      0 20px 40px rgba(var(--clay-shadow-color), 0.10),
+      inset 0 1px 0 rgba(255, 255, 255, 0.7);
+  }
+
+  .shadow-claydeep {
+    box-shadow:
+      0 2px 4px rgba(var(--clay-shadow-color), 0.08),
+      0 12px 24px rgba(var(--clay-shadow-color), 0.10),
+      0 36px 72px rgba(var(--clay-shadow-color), 0.14),
+      inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  }
+
+  .shadow-claypressed {
+    box-shadow:
+      inset 0 2px 4px rgba(var(--clay-shadow-color), 0.14),
+      inset 0 10px 20px rgba(var(--clay-shadow-color), 0.10),
+      inset 0 24px 48px rgba(var(--clay-shadow-color), 0.08),
+      0 1px 1px rgba(255, 255, 255, 0.6);
+    background: linear-gradient(150deg, #efe7dc, #fbf6ee);
+  }
+
+  .shadow-clay-sm {
+    box-shadow:
+      0 1px 2px rgba(var(--clay-shadow-color), 0.06),
+      0 4px 8px rgba(var(--clay-shadow-color), 0.08),
+      0 12px 24px rgba(var(--clay-shadow-color), 0.08),
+      inset 0 1px 0 rgba(255, 255, 255, 0.7);
+  }
+
+  .glass-clay {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+  }
+
+  .icon-orb {
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.75rem;
+    background: linear-gradient(135deg, var(--clay-grad-1), var(--clay-grad-2));
+    flex-shrink: 0;
+  }
+
+  .mockup-placeholder {
+    background: linear-gradient(150deg, #efe7dc, #fffdfa);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+  }
+
+  .hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-0.5rem);
+  }
+
+  /* --- blobs --- */
+  .clay-blob {
+    position: absolute;
+    border-radius: 9999px;
+    filter: blur(60px);
+    opacity: 0.45;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  @keyframes clayFloat1 {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(40px, 60px) scale(1.1); }
+  }
+
+  @keyframes clayFloat2 {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(-50px, 40px) scale(1.15); }
+  }
+
+  @keyframes clayFloat3 {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(30px, -50px) scale(1.05); }
+  }
+
+  .blob-1 {
+    animation: clayFloat1 18s ease-in-out infinite;
+  }
+
+  .blob-2 {
+    animation: clayFloat2 22s ease-in-out infinite;
+  }
+
+  .blob-3 {
+    animation: clayFloat3 20s ease-in-out infinite;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .blob-1,
+    .blob-2,
+    .blob-3 {
+      animation: none !important;
+    }
+    .hover-lift {
+      transition: none !important;
+    }
+  }
+
+  /* --- Destaque secundário: texto corrido --- */
+  .brush-accent {
+    color: #5a2fb8;
+    font-weight: 800;
+  }
+
+  /* --- Destaque principal: headline com traço editorial --- */
+  .headline-brush {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 0.26em;
+    font-weight: inherit;
+  }
+
+  .headline-brush-text {
+    background-image: linear-gradient(100deg, #5a2fb8 10%, #c2267d 90%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .headline-brush-svg {
+    position: absolute;
+    left: 2%;
+    right: 2%;
+    width: 96%;
+    bottom: -0.02em;
+    height: 0.34em;
+    display: block;
+    overflow: visible;
+  }
+
+  .banner-finish {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.16);
+  }
+
+  .price-strike {
+    text-decoration: line-through;
+    text-decoration-color: var(--clay-ink-soft);
+    text-decoration-thickness: 2px;
+  }
+
+  .bonus-intro-block {
+    background: linear-gradient(160deg, rgba(124, 108, 240, 0.12), rgba(255, 107, 157, 0.10));
+    border-radius: 32px;
+  }
+
+  /* --- Carrossel CRV --- */
+  .crv-carousel {
+    position: relative;
+  }
+
+  .crv-viewport {
+    overflow: hidden;
+    border-radius: 24px;
+  }
+
+  .crv-track {
+    display: flex;
+  }
+
+  .crv-slide {
+    flex: 0 0 90%;
+    margin-right: 4%;
+  }
+
+  .crv-slide img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 24px;
+  }
+
+  .crv-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2.75rem;
+    height: 2.75rem;
+    border-radius: 9999px;
+    border: none;
+    background: rgba(255, 253, 250, 0.85);
+    color: var(--clay-ink);
+    font-size: 1.5rem;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  .crv-arrow:hover {
+    background: #fff;
+  }
+
+  .crv-prev {
+    left: 6px;
+  }
+
+  .crv-next {
+    right: 6px;
+  }
+
+  .crv-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 1rem;
+  }
+
+  .crv-dot {
+    width: 8px;
+    height: 8px;
+    padding: 0;
+    border: none;
+    border-radius: 9999px;
+    background: rgba(51, 47, 58, 0.25);
+    cursor: pointer;
+    transition: width 0.3s ease, background 0.3s ease;
+  }
+
+  .crv-dot.is-active {
+    width: 22px;
+    background: linear-gradient(100deg, var(--clay-grad-1), var(--clay-grad-2));
+  }
+
+  .offer-outer {
+    background: linear-gradient(165deg, #2c1f52, #1c1333);
+  }
+
+  .offer-tag {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    color: #fff;
+    border-radius: 9999px;
+    padding: 0.4rem 1rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+
+  .offer-card {
+    background: #fffdfa;
+    border-radius: 30px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.28);
+    position: relative;
+  }
+
+  .offer-pill {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(100deg, var(--clay-grad-1), var(--clay-grad-2));
+    color: #fff;
+    font-weight: 800;
+    font-size: 0.8rem;
+    letter-spacing: 0.04em;
+    padding: 0.45rem 1.1rem;
+    border-radius: 9999px;
+    white-space: nowrap;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  .offer-divider {
+    border-top: 2px dashed rgba(51, 47, 58, 0.18);
+  }
+
+  .offer-cta-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    width: 100%;
+    min-height: 58px;
+    background: #1f9d55;
+    color: #fff;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800;
+    font-size: 1.05rem;
+    border-radius: 16px;
+    border: none;
+    box-shadow: 0 10px 24px rgba(31, 157, 85, 0.35);
+    cursor: pointer;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  }
+
+  .offer-cta-btn:hover {
+    background: #1b8a4b;
+    transform: translateY(-2px);
+    box-shadow: 0 14px 30px rgba(31, 157, 85, 0.4);
+  }
+
+  .offer-cta-btn:active {
+    transform: translateY(0);
+  }
+
+  .offer-cta-arrow {
+    width: 1.6rem;
+    height: 1.6rem;
+    border-radius: 9999px;
+    background: rgba(255, 255, 255, 0.22);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .offer-cta-btn {
+      transition: none !important;
+    }
+  }
+
+  /* --- Garantia --- */
+  .guarantee-panel {
+    position: relative;
+    background: #fffaf3;
+    border: 1px solid rgba(90, 47, 184, 0.10);
+    border-radius: 30px;
+    box-shadow: 0 30px 70px rgba(27, 20, 48, 0.08), 0 10px 24px rgba(27, 20, 48, 0.05);
+    overflow: hidden;
+  }
+
+  .guarantee-panel::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 65% 55% at 14% 10%, rgba(124, 108, 240, 0.10), transparent 60%),
+      radial-gradient(ellipse 65% 55% at 88% 94%, rgba(255, 107, 157, 0.08), transparent 60%);
+    pointer-events: none;
+  }
+
+  .guarantee-panel > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* --- Hero CTA --- */
+  .hero-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    padding: 1.15rem 2.25rem;
+    border-radius: 9999px;
+    background: linear-gradient(100deg, var(--clay-grad-1), var(--clay-grad-2));
+    color: #fff;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800;
+    font-size: clamp(1rem, 4.2vw, 1.15rem);
+    text-decoration: none;
+    box-shadow:
+      0 1px 2px rgba(var(--clay-shadow-color), 0.10),
+      0 10px 20px rgba(124, 108, 240, 0.30),
+      0 24px 48px rgba(194, 38, 125, 0.22),
+      inset 0 1px 0 rgba(255, 255, 255, 0.35);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+  }
+
+  .hero-cta-btn:hover {
+    transform: translateY(-3px);
+    filter: brightness(1.04);
+    box-shadow:
+      0 1px 2px rgba(var(--clay-shadow-color), 0.10),
+      0 14px 26px rgba(124, 108, 240, 0.36),
+      0 30px 56px rgba(194, 38, 125, 0.26),
+      inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  }
+
+  .hero-cta-btn:active {
+    transform: translateY(-1px);
+  }
+
+  .hero-cta-arrow {
+    width: 1.75rem;
+    height: 1.75rem;
+    border-radius: 9999px;
+    background: rgba(255, 255, 255, 0.24);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hero-cta-btn {
+      transition: none !important;
+    }
+  }
+
+  /* --- FAQ accordion --- */
+  .faq-item {
+    border-radius: 20px;
+    overflow: hidden;
+  }
+
+  .faq-trigger {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1.1rem 1.25rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800;
+    color: var(--clay-ink);
+    font-size: clamp(19px, 5vw, 21px);
+  }
+
+  .faq-trigger:focus-visible {
+    outline: 2px solid var(--clay-grad-1);
+    outline-offset: -2px;
+  }
+
+  .faq-icon {
+    flex-shrink: 0;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--clay-grad-1);
+    line-height: 1;
+  }
+
+  .faq-panel {
+    overflow: hidden;
+    max-height: 0;
+    padding: 0 1.25rem;
+    transition: max-height 0.25s ease, padding 0.25s ease;
+  }
+
+  .faq-panel p {
+    font-size: clamp(18px, 5vw, 20px);
+    line-height: 1.5;
+    color: var(--clay-ink);
+  }
+
+  .faq-item.is-open .faq-panel {
+    max-height: 500px;
+    padding: 0 1.25rem 1.15rem;
+  }
+</style>
+
+<!-- Background animated clay blobs (decorative only, no text) -->
+<div
+  class="clay-blob blob-1"
+  style="width: 420px; height: 420px; top: -120px; left: -140px; background: radial-gradient(circle, var(--clay-grad-1), transparent 70%);"
+></div>
+<div
+  class="clay-blob blob-2"
+  style="width: 380px; height: 380px; top: 30%; right: -160px; background: radial-gradient(circle, var(--clay-grad-2), transparent 70%);"
+></div>
+<div
+  class="clay-blob blob-3"
+  style="width: 320px; height: 320px; bottom: -100px; left: 10%; background: radial-gradient(circle, var(--clay-grad-1), transparent 70%);"
+></div>
+
+<!-- Shared gradient definition for the headline brush-stroke accent -->
+<svg width="0" height="0" style="position: absolute;" aria-hidden="true">
+  <defs>
+    <linearGradient id="brushStrokeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#5a2fb8" stop-opacity="0.55" />
+      <stop offset="100%" stop-color="#c2267d" stop-opacity="0.55" />
+    </linearGradient>
+  </defs>
+</svg>
+
+<main class="relative z-10">
+  <!-- SEÇÃO 1: HERO -->
+  <section class="min-h-[90vh] flex flex-col items-center justify-center text-center px-6 py-20">
+    <h1
+      class="font-nunito font-black text-4xl sm:text-5xl md:text-6xl lg:text-7xl tracking-tight leading-[1.1] text-clay-ink max-w-4xl"
+    >
+      + 100 Formatos virais para alcançar
+      <span class="clay-gradient-text">10Mil seguidores em 14 dias</span>
+      no seu Perfil Profissional do Instagram.
+    </h1>
+    <img
+      src="mockups/hero-banner-formatos-virais.png"
+      alt="Banner com formatos virais validados"
+      loading="lazy"
+      class="w-full max-w-xs sm:max-w-sm md:max-w-md mx-auto mt-10 rounded-[10px]"
+      style="filter: drop-shadow(0 24px 32px rgba(0, 0, 0, 0.30)) drop-shadow(0 8px 12px rgba(0, 0, 0, 0.22));"
+    />
+    <p
+      class="font-dmsans font-medium text-lg sm:text-xl md:text-2xl text-clay-ink-soft max-w-3xl mt-10 leading-relaxed"
+    >
+      Receba +100 formatos virais validados prontos pra você copiar e colar no seu Perfil
+      Profissional e alcançar seus primeiros 10 mil seguidores em apenas 14 dias.
+    </p>
+    <a href="#oferta" class="hero-cta-btn mt-9">
+      Quero receber os + 100 Formatos Virais
+      <span class="hero-cta-arrow">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </span>
+    </a>
+  </section>
+
+  <!-- SEÇÃO 2: O QUE SÃO FORMATOS VIRAIS -->
+  <section class="px-4 sm:px-6 py-10 sm:py-16">
+    <div class="max-w-6xl mx-auto space-y-10 md:space-y-14">
+      <h2
+        class="font-nunito font-black text-3xl sm:text-4xl md:text-5xl text-clay-ink text-center leading-tight max-w-4xl mx-auto"
+      >
+        O que são formatos virais, veja alguns exemplos abaixo
+      </h2>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
+        <!-- Ranking -->
+        <div class="rounded-[32px] bg-white/80 shadow-clay hover-lift p-6 md:p-8 space-y-6">
+          <h3 class="font-nunito font-extrabold text-2xl md:text-3xl text-clay-ink">Ranking</h3>
+          <img
+            src="mockups/ranking.png"
+            alt="Ranking"
+            loading="lazy"
+            class="rounded-[24px] w-full max-w-[320px] mx-auto object-contain"
+          />
+          <p class="text-lg sm:text-xl leading-relaxed text-clay-ink">
+            Você pega algo do seu nicho e organiza do pior para o melhor. Por exemplo: o erro 1 é
+            o mais comum e o erro 10 é o mais grave. Esse formato prende até quem não gosta do seu
+            conteúdo e bate 100 mil visualizações fácil.
+          </p>
+        </div>
+
+        <!-- Clone -->
+        <div class="rounded-[32px] bg-white/80 shadow-clay hover-lift p-6 md:p-8 space-y-6">
+          <h3 class="font-nunito font-extrabold text-2xl md:text-3xl text-clay-ink">Clone</h3>
+          <img
+            src="mockups/clone.png"
+            alt="Clone"
+            loading="lazy"
+            class="rounded-[24px] w-full max-w-[320px] mx-auto object-contain"
+          />
+          <p class="text-lg sm:text-xl leading-relaxed text-clay-ink">
+            Você aparece duas vezes no vídeo: uma versão fala e a outra responde. Você só precisa
+            de um celular e um tripé; a edição faz a mágica. Funciona porque cria expectativa de
+            resposta e mantém a retenção lá em cima.
+          </p>
+        </div>
+
+        <!-- POV -->
+        <div class="rounded-[32px] bg-white/80 shadow-clay hover-lift p-6 md:p-8 space-y-6">
+          <h3 class="font-nunito font-extrabold text-2xl md:text-3xl text-clay-ink">POV</h3>
+          <img
+            src="mockups/pov.png"
+            alt="POV"
+            loading="lazy"
+            class="rounded-[24px] w-full max-w-[320px] mx-auto object-contain"
+          />
+          <p class="text-lg sm:text-xl leading-relaxed text-clay-ink">
+            Funciona porque a pessoa não se sente atacada. Parece que você está falando de outra
+            pessoa, mas todo mundo se identifica.
+          </p>
+        </div>
+
+        <!-- Caixinha de Perguntas -->
+        <div class="rounded-[32px] bg-white/80 shadow-clay hover-lift p-6 md:p-8 space-y-6">
+          <h3 class="font-nunito font-extrabold text-2xl md:text-3xl text-clay-ink">
+            Caixinha de Perguntas
+          </h3>
+          <img
+            src="mockups/caixinha-perguntas.png"
+            alt="Caixinha de Perguntas"
+            loading="lazy"
+            class="rounded-[24px] w-full max-w-[320px] mx-auto object-contain"
+          />
+          <p class="text-lg sm:text-xl leading-relaxed text-clay-ink">
+            Você coloca uma pergunta na tela e grava respondendo. Pega uma dúvida que vive
+            aparecendo no seu nicho ou aquela pergunta que todo mundo tem vergonha de fazer. A
+            caixinha desperta a curiosidade, e a sua resposta faz a pessoa ficar. É como ouvir uma
+            conversa que também resolve um problema seu.
+          </p>
+        </div>
+
+        <!-- React Narrado + Tela Dividida -->
+        <div class="rounded-[32px] bg-white/80 shadow-clay hover-lift p-6 md:p-8 space-y-6">
+          <h3 class="font-nunito font-extrabold text-2xl md:text-3xl text-clay-ink">
+            React Narrado + Tela Dividida
+          </h3>
+          <img
+            src="mockups/react-narrado-tela-dividida.png"
+            alt="React Narrado + Tela Dividida"
+            loading="lazy"
+            class="rounded-[24px] w-full max-w-[320px] mx-auto object-contain"
+          />
+          <p class="text-lg sm:text-xl leading-relaxed text-clay-ink">
+            Você coloca um vídeo na parte de cima e aparece embaixo comentando o que está
+            acontecendo. Pode explicar um erro, discordar de uma opinião ou mostrar um detalhe que
+            ninguém percebeu. O vídeo original chama a atenção, e o seu comentário dá um motivo
+            pra continuar assistindo. É como assistir a alguma coisa com alguém que sempre tem uma
+            observação boa pra fazer.
+          </p>
+        </div>
+
+        <!-- Falando com a Câmera -->
+        <div class="rounded-[32px] bg-white/80 shadow-clay hover-lift p-6 md:p-8 space-y-6">
+          <h3 class="font-nunito font-extrabold text-2xl md:text-3xl text-clay-ink">
+            Falando com a Câmera
+          </h3>
+          <img
+            src="mockups/falando-com-a-camera.png"
+            alt="Falando com a Câmera"
+            loading="lazy"
+            class="rounded-[24px] w-full max-w-[320px] mx-auto object-contain"
+          />
+          <p class="text-lg sm:text-xl leading-relaxed text-clay-ink">
+            Você olha pra câmera e fala como se estivesse conversando com uma única pessoa. Começa
+            com uma frase que faz ela pensar "nossa, é exatamente isso que eu vivo" e desenvolve a
+            ideia com exemplos do dia a dia. Não precisa de cenário caro: precisa colocar em
+            palavras algo que a pessoa sente, mas ainda não sabia explicar.
+          </p>
+        </div>
+
+        <!-- Experimento Social -->
+        <div class="rounded-[32px] bg-white/80 shadow-clay hover-lift p-6 md:p-8 space-y-6">
+          <h3 class="font-nunito font-extrabold text-2xl md:text-3xl text-clay-ink">
+            Experimento Social
+          </h3>
+          <img
+            src="mockups/experimento-social.png"
+            alt="Experimento Social"
+            loading="lazy"
+            class="rounded-[24px] w-full max-w-[320px] mx-auto object-contain"
+          />
+          <p class="text-lg sm:text-xl leading-relaxed text-clay-ink">
+            Uma pergunta simples, como "CLT ou PJ?", coloca opiniões diferentes frente a frente.
+            Cada resposta abre uma comparação: quem ganha mais, quem tem mais liberdade, quem
+            pensa como você? É isso que prende: você quer descobrir a próxima resposta e comparar
+            com a sua realidade.
+          </p>
+        </div>
+
+        <!-- Tela Verde -->
+        <div class="rounded-[32px] bg-white/80 shadow-clay hover-lift p-6 md:p-8 space-y-6">
+          <h3 class="font-nunito font-extrabold text-2xl md:text-3xl text-clay-ink">
+            Tela Verde
+          </h3>
+          <img
+            src="mockups/tela-verde.png"
+            alt="Tela Verde"
+            loading="lazy"
+            class="rounded-[24px] w-full max-w-[320px] mx-auto object-contain"
+          />
+          <p class="text-lg sm:text-xl leading-relaxed text-clay-ink">
+            Você aparece com o fundo removido por cima de um vídeo curioso, comentando o que está
+            acontecendo. Pode explicar, dar sua opinião ou chamar atenção para um detalhe que
+            passou despercebido. O vídeo desperta a curiosidade, e o seu comentário transforma
+            aquela cena em conteúdo do seu nicho.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEÇÃO 3: POR QUE OS FORMATOS SÃO DECISIVOS -->
+  <section class="px-5 sm:px-6 py-12 sm:py-16">
+    <div class="max-w-3xl mx-auto space-y-10 md:space-y-12">
+      <h2
+        class="font-nunito font-black text-clay-ink text-center"
+        style="font-size: clamp(30px, 8vw, 36px); line-height: 1.15;"
+      >
+        <span class="block">Porque os
+          <span class="clay-gradient-text">formatos virais</span>
+        </span>
+        <span class="block">são tão decisivos para fazer</span>
+        <span class="block">o algoritmo escolher
+          <span class="headline-brush"><span class="headline-brush-text">engajar o</span><svg class="headline-brush-svg" viewBox="0 0 100 16" preserveAspectRatio="none" aria-hidden="true"><path d="M1,10 C 9,4 20,1.5 34,1 C 50,0.5 64,1.5 75,3.5 C 82,5 87,6.5 90,7.5 C 93,8.5 95,8.8 96,7.5 C 96.8,6.5 96,5.5 94,5 C 97,7 98,10 95,13 C 89,16 72,16.8 54,15.8 C 36,14.8 16,13 1,10 Z" fill="url(#brushStrokeGrad)"/></svg></span> <span class="headline-brush"><span class="headline-brush-text">seu perfil</span><svg class="headline-brush-svg" viewBox="0 0 100 16" preserveAspectRatio="none" aria-hidden="true"><path d="M1,10 C 9,4 20,1.5 34,1 C 50,0.5 64,1.5 75,3.5 C 82,5 87,6.5 90,7.5 C 93,8.5 95,8.8 96,7.5 C 96.8,6.5 96,5.5 94,5 C 97,7 98,10 95,13 C 89,16 72,16.8 54,15.8 C 36,14.8 16,13 1,10 Z" fill="url(#brushStrokeGrad)"/></svg></span>
+        </span>
+      </h2>
+
+      <img
+        src="assets/laptop-mosseri.png"
+        alt="Notebook com vídeo do CEO do Instagram, Adam Mosseri"
+        loading="lazy"
+        class="w-full max-w-md sm:max-w-lg md:max-w-xl mx-auto"
+      />
+
+      <div class="text-left text-clay-ink max-w-[720px] mx-auto space-y-6">
+        <p style="font-size: clamp(20px, 5.2vw, 23px); line-height: 1.45;">
+          No dia 08 de Outubro de 2026 o CEO do Instagram Adam Mosseri revelou que o que
+          diferencia um Perfil engajado de um Perfil flopado não é quantos vídeos você posta por
+          dia e nem quantos seguidores você tem.
+        </p>
+
+        <p
+          class="font-nunito font-black"
+          style="font-size: clamp(26px, 7vw, 30px); line-height: 1.25;"
+        >
+          Mas sim
+          <span class="headline-brush"><span class="headline-brush-text">por quanto</span><svg class="headline-brush-svg" viewBox="0 0 100 16" preserveAspectRatio="none" aria-hidden="true"><path d="M1,10 C 9,4 20,1.5 34,1 C 50,0.5 64,1.5 75,3.5 C 82,5 87,6.5 90,7.5 C 93,8.5 95,8.8 96,7.5 C 96.8,6.5 96,5.5 94,5 C 97,7 98,10 95,13 C 89,16 72,16.8 54,15.8 C 36,14.8 16,13 1,10 Z" fill="url(#brushStrokeGrad)"/></svg></span>
+          <span class="headline-brush"><span class="headline-brush-text">tempo os seus</span><svg class="headline-brush-svg" viewBox="0 0 100 16" preserveAspectRatio="none" aria-hidden="true"><path d="M1,10 C 9,4 20,1.5 34,1 C 50,0.5 64,1.5 75,3.5 C 82,5 87,6.5 90,7.5 C 93,8.5 95,8.8 96,7.5 C 96.8,6.5 96,5.5 94,5 C 97,7 98,10 95,13 C 89,16 72,16.8 54,15.8 C 36,14.8 16,13 1,10 Z" fill="url(#brushStrokeGrad)"/></svg></span>
+          <span class="headline-brush"><span class="headline-brush-text">vídeos prendem</span><svg class="headline-brush-svg" viewBox="0 0 100 16" preserveAspectRatio="none" aria-hidden="true"><path d="M1,10 C 9,4 20,1.5 34,1 C 50,0.5 64,1.5 75,3.5 C 82,5 87,6.5 90,7.5 C 93,8.5 95,8.8 96,7.5 C 96.8,6.5 96,5.5 94,5 C 97,7 98,10 95,13 C 89,16 72,16.8 54,15.8 C 36,14.8 16,13 1,10 Z" fill="url(#brushStrokeGrad)"/></svg></span>
+          <span class="headline-brush"><span class="headline-brush-text">a atenção</span><svg class="headline-brush-svg" viewBox="0 0 100 16" preserveAspectRatio="none" aria-hidden="true"><path d="M1,10 C 9,4 20,1.5 34,1 C 50,0.5 64,1.5 75,3.5 C 82,5 87,6.5 90,7.5 C 93,8.5 95,8.8 96,7.5 C 96.8,6.5 96,5.5 94,5 C 97,7 98,10 95,13 C 89,16 72,16.8 54,15.8 C 36,14.8 16,13 1,10 Z" fill="url(#brushStrokeGrad)"/></svg></span>
+          de um usuário comúm.
+        </p>
+
+        <p style="font-size: clamp(20px, 5.2vw, 23px); line-height: 1.45;">
+          A prioridade número um do Algoritmo é
+          <strong>identificar até quanto tempo um Usuário ficou no seu vídeo</strong>
+          antes de rolar para o próximo.
+        </p>
+
+        <p style="font-size: clamp(20px, 5.2vw, 23px); line-height: 1.45;">
+          E é exatamente por isso que perfis que seguem
+          <span class="brush-accent">Formatos Virais já validados pelo algoritmo</span>
+          conseguem engajamentos que muitos perfis com mais de 1 Milhão de seguidores não
+          conseguem.
+        </p>
+      </div>
+
+      <!-- Comparativo visual -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-8 items-start pt-4">
+        <div class="space-y-3">
+          <h3
+            class="font-nunito font-extrabold text-clay-ink"
+            style="font-size: clamp(25px, 6.5vw, 30px); line-height: 1.2;"
+          >
+            Flopada e sem formato viral ❌
+          </h3>
+          <img
+            src="assets/perfil-flopado.png"
+            alt="Simulação de perfil flopado, sem formato viral, com 343 seguidores"
+            loading="lazy"
+            class="w-full"
+          />
+        </div>
+
+        <div class="space-y-3">
+          <h3
+            class="font-nunito font-extrabold text-clay-ink"
+            style="font-size: clamp(25px, 6.5vw, 30px); line-height: 1.2;"
+          >
+            Engajada e com formato viral ✅
+          </h3>
+          <img
+            src="assets/perfil-engajado.png"
+            alt="Simulação de perfil engajado, com formato viral, com 13.679 seguidores"
+            loading="lazy"
+            class="w-full"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEÇÃO 4: VEJA TUDO O QUE VOCÊ IRÁ RECEBER -->
+  <section class="px-4 sm:px-6 py-10 sm:py-16">
+    <div class="max-w-2xl mx-auto space-y-10 md:space-y-12">
+      <h2
+        class="font-nunito font-black text-3xl sm:text-4xl md:text-5xl text-clay-ink text-center leading-tight"
+      >
+        Veja tudo o que você irá receber
+      </h2>
+
+      <!-- Card principal: 100 Formatos Virais Validados -->
+      <div class="rounded-[32px] bg-white/80 shadow-claydeep p-6 md:p-10 space-y-7">
+        <h3
+          class="font-nunito font-black text-clay-ink leading-tight"
+          style="font-size: clamp(30px, 8vw, 36px);"
+        >
+          100 Formatos Virais Validados
+        </h3>
+        <img src="assets/100-formatos.png" alt="100 Formatos virais validados" loading="lazy" class="banner-finish" />
+        <p
+          class="font-nunito font-extrabold text-clay-ink"
+          style="font-size: clamp(22px, 6vw, 25px); line-height: 1.35;"
+        >
+          Tenha em mãos +100 formatos que já fizeram <span class="brush-accent">milhares de vídeos viralizarem</span>
+          e o passo a passo para aplicar no seu perfil.
+        </p>
+        <ul class="space-y-4">
+          <li class="grid items-start gap-3" style="grid-template-columns: auto 1fr;">
+            <span class="font-black" style="font-size: clamp(19px, 5.2vw, 21px); line-height: 1; color: var(--clay-grad-1);">→</span>
+            <span class="text-clay-ink" style="font-size: clamp(19px, 5.2vw, 21px); line-height: 1.45;">
+              100 formatos virais com exemplos para você entender como gravar.
+            </span>
+          </li>
+          <li class="grid items-start gap-3" style="grid-template-columns: auto 1fr;">
+            <span class="font-black" style="font-size: clamp(19px, 5.2vw, 21px); line-height: 1; color: var(--clay-grad-1);">→</span>
+            <span class="text-clay-ink" style="font-size: clamp(19px, 5.2vw, 21px); line-height: 1.45;">
+              Escolha os que você mais se identificar e adapte ao seu conteúdo.
+            </span>
+          </li>
+          <li class="grid items-start gap-3" style="grid-template-columns: auto 1fr;">
+            <span class="font-black" style="font-size: clamp(19px, 5.2vw, 21px); line-height: 1; color: var(--clay-grad-1);">→</span>
+            <span class="text-clay-ink" style="font-size: clamp(19px, 5.2vw, 21px); line-height: 1.45;">
+              Saiba como apresentar seu assunto para despertar interesse e manter a atenção.
+            </span>
+          </li>
+          <li class="grid items-start gap-3" style="grid-template-columns: auto 1fr;">
+            <span class="font-black" style="font-size: clamp(19px, 5.2vw, 21px); line-height: 1; color: var(--clay-grad-1);">→</span>
+            <span class="text-clay-ink" style="font-size: clamp(19px, 5.2vw, 21px); line-height: 1.45;">
+              Repita o formato nos próximos vídeos sem precisar inventar tudo de novo.
+            </span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Card: 112 Roteiros Virais Prontos -->
+      <div class="rounded-[32px] bg-white/80 shadow-clay p-6 md:p-8 space-y-6">
+        <h3
+          class="font-nunito font-black text-clay-ink leading-tight"
+          style="font-size: clamp(28px, 7.5vw, 34px);"
+        >
+          112 Roteiros Virais Prontos
+        </h3>
+        <img src="assets/112-roteiros.png" alt="112 Roteiros virais prontos" loading="lazy" class="banner-finish" />
+        <p
+          class="font-nunito font-extrabold text-clay-ink"
+          style="font-size: clamp(22px, 6vw, 25px); line-height: 1.35;"
+        >
+          Saiba exatamente <span class="brush-accent">o que falar, da primeira frase até o final do vídeo</span>.
+        </p>
+        <ul class="space-y-4">
+          <li class="grid items-start gap-3" style="grid-template-columns: auto 1fr;">
+            <span class="font-black" style="font-size: clamp(19px, 5.2vw, 21px); line-height: 1; color: var(--clay-grad-1);">→</span>
+            <span class="text-clay-ink" style="font-size: clamp(19px, 5.2vw, 21px); line-height: 1.45;">
+              112 roteiros prontos: copie, cole e adapte ao seu assunto.
+            </span>
+          </li>
+          <li class="grid items-start gap-3" style="grid-template-columns: auto 1fr;">
+            <span class="font-black" style="font-size: clamp(19px, 5.2vw, 21px); line-height: 1; color: var(--clay-grad-1);">→</span>
+            <span class="text-clay-ink" style="font-size: clamp(19px, 5.2vw, 21px); line-height: 1.45;">
+              Começo, meio e fim definidos para você seguir na gravação.
+            </span>
+          </li>
+          <li class="grid items-start gap-3" style="grid-template-columns: auto 1fr;">
+            <span class="font-black" style="font-size: clamp(19px, 5.2vw, 21px); line-height: 1; color: var(--clay-grad-1);">→</span>
+            <span class="text-clay-ink" style="font-size: clamp(19px, 5.2vw, 21px); line-height: 1.45;">
+              Grave sem passar horas escrevendo ou travar na frente da câmera.
+            </span>
+          </li>
+          <li class="grid items-start gap-3" style="grid-template-columns: auto 1fr;">
+            <span class="font-black" style="font-size: clamp(19px, 5.2vw, 21px); line-height: 1; color: var(--clay-grad-1);">→</span>
+            <span class="text-clay-ink" style="font-size: clamp(19px, 5.2vw, 21px); line-height: 1.45;">
+              Transforme o que você sabe em vídeos que dão vontade de continuar assistindo.
+            </span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Card: 75 Ganchos Poderosos -->
+      <div class="rounded-[32px] bg-white/80 shadow-clay p-6 md:p-8 space-y-6">
+        <h3
+          class="font-nunito font-black text-clay-ink leading-tight"
+          style="font-size: clamp(28px, 7.5vw, 34px);"
+        >
+          75 Ganchos Poderosos
+        </h3>
+        <img src="assets/75-ganchos.png" alt="75 Ganchos poderosos" loading="lazy" class="banner-finish" />
+        <p
+          class="font-nunito font-extrabold text-clay-ink"
+          style="font-size: clamp(22px, 6vw, 25px); line-height: 1.35;"
+        >
+          Faça a pessoa <span class="brush-accent">parar de rolar o feed</span> e prestar atenção no seu vídeo.
+        </p>
+        <ul class="space-y-4">
+          <li class="grid items-start gap-3" style="grid-template-columns: auto 1fr;">
+            <span class="font-black" style="font-size: clamp(19px, 5.2vw, 21px); line-height: 1; color: var(--clay-grad-1);">→</span>
+            <span class="text-clay-ink" style="font-size: clamp(19px, 5.2vw, 21px); line-height: 1.45;">
+              75 aberturas prontas para usar nos seus conteúdos.
+            </span>
+          </li>
+          <li class="grid items-start gap-3" style="grid-template-columns: auto 1fr;">
+            <span class="font-black" style="font-size: clamp(19px, 5.2vw, 21px); line-height: 1; color: var(--clay-grad-1);">→</span>
+            <span class="text-clay-ink" style="font-size: clamp(19px, 5.2vw, 21px); line-height: 1.45;">
+              Desperte curiosidade nos primeiros segundos.
+            </span>
+          </li>
+          <li class="grid items-start gap-3" style="grid-template-columns: auto 1fr;">
+            <span class="font-black" style="font-size: clamp(19px, 5.2vw, 21px); line-height: 1; color: var(--clay-grad-1);">→</span>
+            <span class="text-clay-ink" style="font-size: clamp(19px, 5.2vw, 21px); line-height: 1.45;">
+              Dê um motivo para quem ainda não te conhece continuar assistindo.
+            </span>
+          </li>
+          <li class="grid items-start gap-3" style="grid-template-columns: auto 1fr;">
+            <span class="font-black" style="font-size: clamp(19px, 5.2vw, 21px); line-height: 1; color: var(--clay-grad-1);">→</span>
+            <span class="text-clay-ink" style="font-size: clamp(19px, 5.2vw, 21px); line-height: 1.45;">
+              Escolha o gancho, adapte ao assunto e comece a gravar.
+            </span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Bloco destacado: introdução aos bônus -->
+      <div class="bonus-intro-block text-center px-6 py-10 sm:py-12">
+        <p
+          class="font-nunito font-black text-clay-ink"
+          style="font-size: clamp(30px, 8.5vw, 36px); line-height: 1.15;"
+        >
+          Mas ainda não é tudo...
+        </p>
+        <p
+          class="font-dmsans text-clay-ink mt-5"
+          style="font-size: clamp(21px, 5.5vw, 24px); line-height: 1.4;"
+        >
+          Comprando nos dias
+        </p>
+        <p
+          class="font-nunito font-black clay-gradient-text mt-1"
+          style="font-size: clamp(30px, 9vw, 38px); line-height: 1.15;"
+        >
+          16, 17 e 18 de Outubro
+        </p>
+        <p
+          class="font-dmsans text-clay-ink mt-4"
+          style="font-size: clamp(21px, 5.5vw, 24px); line-height: 1.4;"
+        >
+          você receberá:
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEÇÃO 5: BÔNUS EXCLUSIVOS -->
+  <section class="px-4 sm:px-6 pt-4 sm:pt-6 pb-10 sm:pb-16">
+    <div class="max-w-2xl mx-auto space-y-10 md:space-y-12">
+      <div class="text-center space-y-5">
+        <h2
+          class="font-nunito font-black text-clay-ink"
+          style="font-size: clamp(34px, 9.5vw, 42px); line-height: 1.1;"
+        >
+          <span class="clay-gradient-text">BÔNUS</span> EXCLUSIVOS:
+        </h2>
+        <p
+          class="text-clay-ink max-w-2xl mx-auto"
+          style="font-size: clamp(21px, 5.5vw, 23px); line-height: 1.45;"
+        >
+          Você também recebe estes <strong>3 bônus</strong> para saber como aplicar os formatos,
+          ter <span class="brush-accent">ideias para os próximos vídeos</span> e
+          <span class="brush-accent">conduzir suas vendas no Direct</span>.
+        </p>
+      </div>
+
+      <!-- Bônus 1: Plano de Estratégia -->
+      <div class="rounded-[32px] bg-white/80 shadow-clay p-6 md:p-8 space-y-6">
+        <h3
+          class="font-nunito font-black text-clay-ink leading-tight"
+          style="font-size: clamp(28px, 7.5vw, 34px);"
+        >
+          Plano de Estratégia com Passo a Passo Completo
+        </h3>
+        <img src="assets/plano-estrategia.png" alt="Plano de Estratégia passo a passo" loading="lazy" class="banner-finish" />
+        <p
+          class="font-nunito font-extrabold text-clay-ink"
+          style="font-size: clamp(22px, 6vw, 25px); line-height: 1.35;"
+        >
+          Abra o Instagram <span class="brush-accent">sabendo o que fazer para o seu perfil crescer</span>.
+        </p>
+        <ul class="space-y-4">
+          <li class="grid items-start gap-3" style="grid-template-columns: auto 1fr;">
+            <span class="font-black" style="font-size: clamp(19px, 5.2vw, 21px); line-height: 1; color: var(--clay-grad-1);">→</span>
+            <span class="text-clay-ink" style="font-size: clamp(19px, 5.2vw, 21px); line-height: 1.45;">
+              Saiba o que fazer primeiro e quais passos seguir.
+            </span>
+          </li>
+          <li class="grid items-start gap-3" style="grid-template-columns: auto 1fr;">
+            <span class="font-black" style="font-size: clamp(19px, 5.2vw, 21px); line-height: 1; color: var(--clay-grad-1);">→</span>
+            <span class="text-clay-ink" style="font-size: clamp(19px, 5.2vw, 21px); line-height: 1.45;">
+              Aprenda a usar os formatos, os roteiros e os ganchos juntos.
+            </span>
+          </li>
+          <li class="grid items-start gap-3" style="grid-template-columns: auto 1fr;">
+            <span class="font-black" style="font-size: clamp(19px, 5.2vw, 21px); line-height: 1; color: var(--clay-grad-1);">→</span>
+            <span class="text-clay-ink" style="font-size: clamp(19px, 5.2vw, 21px); line-height: 1.45;">
+              Organize seus próximos vídeos sem depender da inspiração do dia.
+            </span>
+          </li>
+          <li class="grid items-start gap-3" style="grid-template-columns: auto 1fr;">
+            <span class="font-black" style="font-size: clamp(19px, 5.2vw, 21px); line-height: 1; color: var(--clay-grad-1);">→</span>
+            <span class="text-clay-ink" style="font-size: clamp(19px, 5.2vw, 21px); line-height: 1.45;">
+              Siga um plano de 14 dias com a meta de alcançar seus primeiros 10 mil seguidores.
+            </span>
+          </li>
+        </ul>
+        <div class="text-center space-y-1 pt-2">
+          <p class="text-base sm:text-lg price-strike text-clay-ink-soft">DE R$ 67,90</p>
+          <p class="text-sm sm:text-base font-medium text-clay-ink-soft">HOJE POR APENAS</p>
+          <p class="font-nunito font-black text-3xl sm:text-4xl" style="color: #1f9d55;">GRÁTIS</p>
+        </div>
+      </div>
+
+      <!-- Bônus 2: Arsenal de Ideias para 45 Nichos -->
+      <div class="rounded-[32px] bg-white/80 shadow-clay p-6 md:p-8 space-y-6">
+        <h3
+          class="font-nunito font-black text-clay-ink leading-tight"
+          style="font-size: clamp(28px, 7.5vw, 34px);"
+        >
+          Arsenal de Ideias Virais para 45 Nichos
+        </h3>
+        <img src="assets/45-nichos.png" alt="Arsenal de Ideias virais para 45 Nichos" loading="lazy" class="banner-finish" />
+        <p
+          class="font-nunito font-extrabold text-clay-ink"
+          style="font-size: clamp(22px, 6vw, 25px); line-height: 1.35;"
+        >
+          <span class="brush-accent">Nunca mais fique sem saber o que postar.</span>
+        </p>
+        <ul class="space-y-4">
+          <li class="grid items-start gap-3" style="grid-template-columns: auto 1fr;">
+            <span class="font-black" style="font-size: clamp(19px, 5.2vw, 21px); line-height: 1; color: var(--clay-grad-1);">→</span>
+            <span class="text-clay-ink" style="font-size: clamp(19px, 5.2vw, 21px); line-height: 1.45;">
+              Ideias de conteúdo organizadas para 45 nichos.
+            </span>
+          </li>
+          <li class="grid items-start gap-3" style="grid-template-columns: auto 1fr;">
+            <span class="font-black" style="font-size: clamp(19px, 5.2vw, 21px); line-height: 1; color: var(--clay-grad-1);">→</span>
+            <span class="text-clay-ink" style="font-size: clamp(19px, 5.2vw, 21px); line-height: 1.45;">
+              Encontre um assunto e saiba como transformá-lo em vídeo.
+            </span>
+          </li>
+          <li class="grid items-start gap-3" style="grid-template-columns: auto 1fr;">
+            <span class="font-black" style="font-size: clamp(19px, 5.2vw, 21px); line-height: 1; color: var(--clay-grad-1);">→</span>
+            <span class="text-clay-ink" style="font-size: clamp(19px, 5.2vw, 21px); line-height: 1.45;">
+              Aprenda a adaptar ideias de outros nichos para o seu.
+            </span>
+          </li>
+          <li class="grid items-start gap-3" style="grid-template-columns: auto 1fr;">
+            <span class="font-black" style="font-size: clamp(19px, 5.2vw, 21px); line-height: 1; color: var(--clay-grad-1);">→</span>
+            <span class="text-clay-ink" style="font-size: clamp(19px, 5.2vw, 21px); line-height: 1.45;">
+              Deixe seus próximos conteúdos definidos sem perder horas procurando inspiração.
+            </span>
+          </li>
+        </ul>
+        <div class="text-center space-y-1 pt-2">
+          <p class="text-base sm:text-lg price-strike text-clay-ink-soft">DE R$ 57,90</p>
+          <p class="text-sm sm:text-base font-medium text-clay-ink-soft">HOJE POR APENAS</p>
+          <p class="font-nunito font-black text-3xl sm:text-4xl" style="color: #1f9d55;">GRÁTIS</p>
+        </div>
+      </div>
+
+      <!-- Bônus 3: Lucro no Direct -->
+      <div class="rounded-[32px] bg-white/80 shadow-clay p-6 md:p-8 space-y-6">
+        <h3
+          class="font-nunito font-black text-clay-ink leading-tight"
+          style="font-size: clamp(28px, 7.5vw, 34px);"
+        >
+          Lucro no Direct: Automação Inteligente
+        </h3>
+        <img src="assets/lucro-direct.png" alt="Lucro no Direct, automação inteligente" loading="lazy" class="banner-finish" />
+        <p
+          class="font-nunito font-extrabold text-clay-ink"
+          style="font-size: clamp(22px, 6vw, 25px); line-height: 1.35;"
+        >
+          Transforme cada mensagem <span class="brush-accent">em dinheiro no seu bolso</span>.
+        </p>
+        <ul class="space-y-4">
+          <li class="grid items-start gap-3" style="grid-template-columns: auto 1fr;">
+            <span class="font-black" style="font-size: clamp(19px, 5.2vw, 21px); line-height: 1; color: var(--clay-grad-1);">→</span>
+            <span class="text-clay-ink" style="font-size: clamp(19px, 5.2vw, 21px); line-height: 1.45;">
+              Roteiro passo a passo: como responder DMs que geram vendas.
+            </span>
+          </li>
+          <li class="grid items-start gap-3" style="grid-template-columns: auto 1fr;">
+            <span class="font-black" style="font-size: clamp(19px, 5.2vw, 21px); line-height: 1; color: var(--clay-grad-1);">→</span>
+            <span class="text-clay-ink" style="font-size: clamp(19px, 5.2vw, 21px); line-height: 1.45;">
+              Modelos prontos: copie, cole e venda hoje mesmo.
+            </span>
+          </li>
+          <li class="grid items-start gap-3" style="grid-template-columns: auto 1fr;">
+            <span class="font-black" style="font-size: clamp(19px, 5.2vw, 21px); line-height: 1; color: var(--clay-grad-1);">→</span>
+            <span class="text-clay-ink" style="font-size: clamp(19px, 5.2vw, 21px); line-height: 1.45;">
+              Como apresentar sua oferta sem parecer insistente.
+            </span>
+          </li>
+          <li class="grid items-start gap-3" style="grid-template-columns: auto 1fr;">
+            <span class="font-black" style="font-size: clamp(19px, 5.2vw, 21px); line-height: 1; color: var(--clay-grad-1);">→</span>
+            <span class="text-clay-ink" style="font-size: clamp(19px, 5.2vw, 21px); line-height: 1.45;">
+              Automação inteligente: como organizar e otimizar seu atendimento.
+            </span>
+          </li>
+        </ul>
+        <div class="text-center space-y-1 pt-2">
+          <p class="text-base sm:text-lg price-strike text-clay-ink-soft">DE R$ 47,90</p>
+          <p class="text-sm sm:text-base font-medium text-clay-ink-soft">HOJE POR APENAS</p>
+          <p class="font-nunito font-black text-3xl sm:text-4xl" style="color: #1f9d55;">GRÁTIS</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEÇÃO 7: CARROSSEL DEPOIMENTO CRV -->
+  <section class="px-4 sm:px-6 py-10 sm:py-16">
+    <div class="max-w-2xl mx-auto space-y-8">
+      <h2
+        class="font-nunito font-black text-clay-ink text-center"
+        style="font-size: clamp(28px, 7.5vw, 34px); line-height: 1.2;"
+      >
+        Veja como os formatos podem ser aplicados em diferentes nichos:
+      </h2>
+
+      <div class="crv-carousel" id="crvCarousel">
+        <div class="crv-viewport">
+          <div class="crv-track" id="crvTrack">
+            <div class="crv-slide" aria-hidden="true">
+              <img src="assets/crv/depoimento-5.png" alt="" loading="lazy" />
+            </div>
+            <div class="crv-slide">
+              <img src="assets/crv/depoimento-1.png" alt="Exemplo ilustrativo de aplicação dos formatos de vídeo" loading="lazy" />
+            </div>
+            <div class="crv-slide">
+              <img src="assets/crv/depoimento-2.png" alt="Exemplo ilustrativo de aplicação dos formatos de vídeo" loading="lazy" />
+            </div>
+            <div class="crv-slide">
+              <img src="assets/crv/depoimento-3.png" alt="Exemplo ilustrativo de aplicação dos formatos de vídeo" loading="lazy" />
+            </div>
+            <div class="crv-slide">
+              <img src="assets/crv/depoimento-4.png" alt="Exemplo ilustrativo de aplicação dos formatos de vídeo" loading="lazy" />
+            </div>
+            <div class="crv-slide">
+              <img src="assets/crv/depoimento-5.png" alt="Exemplo ilustrativo de aplicação dos formatos de vídeo" loading="lazy" />
+            </div>
+            <div class="crv-slide" aria-hidden="true">
+              <img src="assets/crv/depoimento-1.png" alt="" loading="lazy" />
+            </div>
+          </div>
+        </div>
+        <button class="crv-arrow crv-prev" type="button" aria-label="Exemplo anterior">‹</button>
+        <button class="crv-arrow crv-next" type="button" aria-label="Próximo exemplo">›</button>
+        <div class="crv-dots" id="crvDots"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEÇÃO 8: RECAPITULANDO + CTA -->
+  <section class="px-4 sm:px-6 py-10 sm:py-16">
+    <div class="max-w-2xl mx-auto space-y-8">
+      <div class="rounded-[32px] bg-white/80 shadow-clay p-6 md:p-10 space-y-7">
+        <h2
+          class="font-nunito font-black text-clay-ink"
+          style="font-size: clamp(30px, 8vw, 36px); line-height: 1.2;"
+        >
+          Recapitulando
+          <span class="headline-brush"><span class="headline-brush-text">tudo o que</span><svg class="headline-brush-svg" viewBox="0 0 100 16" preserveAspectRatio="none" aria-hidden="true"><path d="M1,10 C 9,4 20,1.5 34,1 C 50,0.5 64,1.5 75,3.5 C 82,5 87,6.5 90,7.5 C 93,8.5 95,8.8 96,7.5 C 96.8,6.5 96,5.5 94,5 C 97,7 98,10 95,13 C 89,16 72,16.8 54,15.8 C 36,14.8 16,13 1,10 Z" fill="url(#brushStrokeGrad)"/></svg></span>
+          <span class="headline-brush"><span class="headline-brush-text">você irá receber</span><svg class="headline-brush-svg" viewBox="0 0 100 16" preserveAspectRatio="none" aria-hidden="true"><path d="M1,10 C 9,4 20,1.5 34,1 C 50,0.5 64,1.5 75,3.5 C 82,5 87,6.5 90,7.5 C 93,8.5 95,8.8 96,7.5 C 96.8,6.5 96,5.5 94,5 C 97,7 98,10 95,13 C 89,16 72,16.8 54,15.8 C 36,14.8 16,13 1,10 Z" fill="url(#brushStrokeGrad)"/></svg></span>:
+        </h2>
+        <img
+          src="assets/kit-seis-paineis.png"
+          alt="Kit premium com os seis painéis virais: 100 formatos, 112 roteiros, 75 ganchos, plano de estratégia, 45 nichos e lucro no direct"
+          loading="lazy"
+          class="w-full"
+        />
+        <ul class="space-y-6">
+          <li class="grid items-start gap-3" style="grid-template-columns: auto 1fr;">
+            <span style="font-size: clamp(24px, 6vw, 28px); line-height: 1; color: #1f9d55;">✅</span>
+            <span class="text-clay-ink" style="font-size: clamp(21px, 5.5vw, 23px); line-height: 1.45;">
+              <strong>100 formatos virais validados:</strong> escolha os que você mais se
+              identificar e siga os exemplos para criar seus vídeos.
+            </span>
+          </li>
+          <li class="grid items-start gap-3" style="grid-template-columns: auto 1fr;">
+            <span style="font-size: clamp(24px, 6vw, 28px); line-height: 1; color: #1f9d55;">✅</span>
+            <span class="text-clay-ink" style="font-size: clamp(21px, 5.5vw, 23px); line-height: 1.45;">
+              <strong>112 roteiros virais</strong> prontos apenas Copie e Cole.
+            </span>
+          </li>
+          <li class="grid items-start gap-3" style="grid-template-columns: auto 1fr;">
+            <span style="font-size: clamp(24px, 6vw, 28px); line-height: 1; color: #1f9d55;">✅</span>
+            <span class="text-clay-ink" style="font-size: clamp(21px, 5.5vw, 23px); line-height: 1.45;">
+              <strong>75 ganchos</strong> poderosos que tiram o usuário do Scrolling (Rolagem
+              Infinita).
+            </span>
+          </li>
+          <li class="grid items-start gap-3" style="grid-template-columns: auto 1fr;">
+            <span style="font-size: clamp(24px, 6vw, 28px); line-height: 1; color: #1f9d55;">✅</span>
+            <span class="text-clay-ink" style="font-size: clamp(21px, 5.5vw, 23px); line-height: 1.45;">
+              <strong>Plano de estratégia</strong> com Passo a Passo Completo para saber o que
+              fazer primeiro, como aplicar os formatos e quais passos seguir.
+            </span>
+          </li>
+          <li class="grid items-start gap-3" style="grid-template-columns: auto 1fr;">
+            <span style="font-size: clamp(24px, 6vw, 28px); line-height: 1; color: #1f9d55;">✅</span>
+            <span class="text-clay-ink" style="font-size: clamp(21px, 5.5vw, 23px); line-height: 1.45;">
+              Arsenal de Ideias virais para <strong>45 nichos</strong>.
+            </span>
+          </li>
+          <li class="grid items-start gap-3" style="grid-template-columns: auto 1fr;">
+            <span style="font-size: clamp(24px, 6vw, 28px); line-height: 1; color: #1f9d55;">✅</span>
+            <span class="text-clay-ink" style="font-size: clamp(21px, 5.5vw, 23px); line-height: 1.45;">
+              <strong>Lucro no Direct:</strong> Automação Inteligente para fechar suas vendas com
+              sucesso.
+            </span>
+          </li>
+          <li class="grid items-start gap-3" style="grid-template-columns: auto 1fr;">
+            <span style="font-size: clamp(24px, 6vw, 28px); line-height: 1; color: #1f9d55;">✅</span>
+            <span class="text-clay-ink" style="font-size: clamp(21px, 5.5vw, 23px); line-height: 1.45;">
+              Menos tempo pensando no que postar: comece com a ideia, o formato e o roteiro em
+              mãos.
+            </span>
+          </li>
+          <li class="grid items-start gap-3" style="grid-template-columns: auto 1fr;">
+            <span style="font-size: clamp(24px, 6vw, 28px); line-height: 1; color: #1f9d55;">✅</span>
+            <span class="text-clay-ink" style="font-size: clamp(21px, 5.5vw, 23px); line-height: 1.45;">
+              Mais segurança para gravar: saiba como começar, desenvolver o assunto e terminar
+              seu vídeo.
+            </span>
+          </li>
+          <li class="grid items-start gap-3" style="grid-template-columns: auto 1fr;">
+            <span style="font-size: clamp(24px, 6vw, 28px); line-height: 1; color: #1f9d55;">✅</span>
+            <span class="text-clay-ink" style="font-size: clamp(21px, 5.5vw, 23px); line-height: 1.45;">
+              Os formatos, os roteiros e a estratégia que você precisa para engajar seu perfil e
+              buscar seus primeiros 10 mil seguidores em 14 dias.
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEÇÃO 9: OFERTA + CTA -->
+  <section id="oferta" class="offer-outer px-5 sm:px-6 py-14 sm:py-20">
+    <div class="max-w-xl mx-auto flex flex-col items-center text-center space-y-6">
+      <span class="offer-tag">Temos algo especial para você</span>
+      <h2
+        class="font-nunito font-black text-white"
+        style="font-size: clamp(28px, 7.5vw, 34px); line-height: 1.15;"
+      >
+        Leve tudo com o desconto exclusivo desta página
+      </h2>
+
+      <div class="offer-card w-full p-6 sm:p-7 mt-8 sm:mt-9">
+        <span class="offer-pill">PACOTE COMPLETO</span>
+
+        <div class="space-y-7 pt-3">
+          <!-- 1. Título do pacote -->
+          <div class="text-center">
+            <p class="font-nunito font-black text-clay-ink" style="font-size: clamp(24px, 6.5vw, 28px); line-height: 1.2;">
+              100 Formatos Virais Validados
+            </p>
+            <p class="font-nunito font-bold text-clay-ink-soft" style="font-size: clamp(16px, 4.5vw, 18px); line-height: 1.3;">
+              + todos os bônus exclusivos
+            </p>
+          </div>
+
+          <!-- 2. Imagem da oferta (mesma da HERO) -->
+          <img
+            src="mockups/hero-banner-formatos-virais.png"
+            alt="Banner com formatos virais validados"
+            loading="lazy"
+            class="mx-auto"
+            style="width: 90%; height: auto;"
+          />
+
+          <!-- 3. Lista de tudo que está incluído (mesmos itens da recapitulação) -->
+          <ul class="space-y-4 text-left">
+            <li class="grid items-start gap-3" style="grid-template-columns: auto 1fr;">
+              <span class="flex items-center justify-center flex-shrink-0 rounded-full" style="width:26px;height:26px;background:#1f9d55;color:#fff;font-size:14px;">✓</span>
+              <span class="text-clay-ink" style="font-size: clamp(17px, 4.5vw, 19px); line-height: 1.5;">
+                <strong>100 formatos virais validados:</strong> escolha os que você mais se
+                identificar e siga os exemplos para criar seus vídeos.
+              </span>
+            </li>
+            <li class="grid items-start gap-3" style="grid-template-columns: auto 1fr;">
+              <span class="flex items-center justify-center flex-shrink-0 rounded-full" style="width:26px;height:26px;background:#1f9d55;color:#fff;font-size:14px;">✓</span>
+              <span class="text-clay-ink" style="font-size: clamp(17px, 4.5vw, 19px); line-height: 1.5;">
+                <strong>112 roteiros virais</strong> prontos apenas Copie e Cole.
+              </span>
+            </li>
+            <li class="grid items-start gap-3" style="grid-template-columns: auto 1fr;">
+              <span class="flex items-center justify-center flex-shrink-0 rounded-full" style="width:26px;height:26px;background:#1f9d55;color:#fff;font-size:14px;">✓</span>
+              <span class="text-clay-ink" style="font-size: clamp(17px, 4.5vw, 19px); line-height: 1.5;">
+                <strong>75 ganchos</strong> poderosos que tiram o usuário do Scrolling (Rolagem
+                Infinita).
+              </span>
+            </li>
+            <li class="grid items-start gap-3" style="grid-template-columns: auto 1fr;">
+              <span class="flex items-center justify-center flex-shrink-0 rounded-full" style="width:26px;height:26px;background:#1f9d55;color:#fff;font-size:14px;">✓</span>
+              <span class="text-clay-ink" style="font-size: clamp(17px, 4.5vw, 19px); line-height: 1.5;">
+                <strong>Plano de estratégia</strong> com Passo a Passo Completo para saber o que
+                fazer primeiro, como aplicar os formatos e quais passos seguir.
+              </span>
+            </li>
+            <li class="grid items-start gap-3" style="grid-template-columns: auto 1fr;">
+              <span class="flex items-center justify-center flex-shrink-0 rounded-full" style="width:26px;height:26px;background:#1f9d55;color:#fff;font-size:14px;">✓</span>
+              <span class="text-clay-ink" style="font-size: clamp(17px, 4.5vw, 19px); line-height: 1.5;">
+                Arsenal de Ideias virais para <strong>45 nichos</strong>.
+              </span>
+            </li>
+            <li class="grid items-start gap-3" style="grid-template-columns: auto 1fr;">
+              <span class="flex items-center justify-center flex-shrink-0 rounded-full" style="width:26px;height:26px;background:#1f9d55;color:#fff;font-size:14px;">✓</span>
+              <span class="text-clay-ink" style="font-size: clamp(17px, 4.5vw, 19px); line-height: 1.5;">
+                <strong>Lucro no Direct:</strong> Automação Inteligente para fechar suas vendas com
+                sucesso.
+              </span>
+            </li>
+            <li class="grid items-start gap-3" style="grid-template-columns: auto 1fr;">
+              <span class="flex items-center justify-center flex-shrink-0 rounded-full" style="width:26px;height:26px;background:#1f9d55;color:#fff;font-size:14px;">✓</span>
+              <span class="text-clay-ink" style="font-size: clamp(17px, 4.5vw, 19px); line-height: 1.5;">
+                Menos tempo pensando no que postar: comece com a ideia, o formato e o roteiro em
+                mãos.
+              </span>
+            </li>
+            <li class="grid items-start gap-3" style="grid-template-columns: auto 1fr;">
+              <span class="flex items-center justify-center flex-shrink-0 rounded-full" style="width:26px;height:26px;background:#1f9d55;color:#fff;font-size:14px;">✓</span>
+              <span class="text-clay-ink" style="font-size: clamp(17px, 4.5vw, 19px); line-height: 1.5;">
+                Mais segurança para gravar: saiba como começar, desenvolver o assunto e terminar
+                seu vídeo.
+              </span>
+            </li>
+            <li class="grid items-start gap-3" style="grid-template-columns: auto 1fr;">
+              <span class="flex items-center justify-center flex-shrink-0 rounded-full" style="width:26px;height:26px;background:#1f9d55;color:#fff;font-size:14px;">✓</span>
+              <span class="text-clay-ink" style="font-size: clamp(17px, 4.5vw, 19px); line-height: 1.5;">
+                Os formatos, os roteiros e a estratégia que você precisa para engajar seu perfil
+                e buscar seus primeiros 10 mil seguidores em 14 dias.
+              </span>
+            </li>
+          </ul>
+
+          <!-- 4. Divisor -->
+          <div class="offer-divider"></div>
+
+          <!-- 5-7. Preço -->
+          <div class="text-center space-y-1">
+            <p class="text-base sm:text-lg price-strike text-clay-ink-soft">DE R$ 127,00</p>
+            <span
+              class="inline-block font-nunito font-extrabold"
+              style="background: var(--clay-grad-2); color: #fff; font-size: 0.85rem; padding: 0.3rem 0.9rem; border-radius: 9999px;"
+            >
+              HOJE POR APENAS
+            </span>
+            <p class="font-nunito" style="font-weight: 800; font-size: clamp(60px, 16vw, 72px); line-height: 1; color: var(--clay-grad-1); margin-top: 0.25rem;">
+              <span style="font-size: 0.5em; vertical-align: top;">R$</span>47
+            </p>
+            <p class="font-dmsans font-semibold text-clay-ink" style="font-size: 1.05rem;">
+              Pagamento único
+            </p>
+          </div>
+
+          <!-- 9. Botão principal -->
+          <!-- PENDÊNCIA: link de checkout ainda não existe no projeto — substituir "#checkout" pela URL real -->
+          <a href="#checkout" class="offer-cta-btn">
+            QUERO MEU PACOTE COMPLETO
+            <span class="offer-cta-arrow">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+          </a>
+
+          <!-- 10. Segurança -->
+          <p class="flex items-center justify-center gap-2 text-clay-ink-soft" style="font-size: 0.9rem;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="5" y="11" width="14" height="9" rx="2" stroke="currentColor" stroke-width="2"/>
+              <path d="M8 11V7a4 4 0 0 1 8 0v4" stroke="currentColor" stroke-width="2"/>
+            </svg>
+            Pagamento 100% seguro
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEÇÃO 10: QUEM SOU EU -->
+  <section class="px-4 sm:px-6 py-12 sm:py-16">
+    <div class="max-w-2xl mx-auto space-y-8">
+      <h2
+        class="font-nunito font-black text-clay-ink text-center"
+        style="font-size: clamp(28px, 7.5vw, 34px); line-height: 1.2;"
+      >
+        Muito prazer, eu sou a Fê! 🧡
+      </h2>
+
+      <img
+        src="assets/fe-tonella-perfil.png"
+        alt="Perfil de Fernanda Antonella (@fe.tonella) no Instagram"
+        loading="lazy"
+        class="mx-auto w-full"
+        style="max-width: 420px; height: auto; border-radius: 20px; box-shadow: 0 10px 28px rgba(0, 0, 0, 0.14);"
+      />
+
+      <div
+        class="text-left text-clay-ink mx-auto space-y-6"
+        style="max-width: 680px; font-size: clamp(20px, 5.2vw, 22px); line-height: 1.5;"
+      >
+        <p>
+          Muito prazer! Eu sou Fernanda Antonella, mas
+          <span class="brush-accent">pode me chamar de Fê!</span> 🧡 No Instagram, você me encontra como
+          @fe.tonella.
+        </p>
+        <p>
+          Sou apaixonada por criatividade e por aquele momento em que uma ideia finalmente sai da
+          cabeça e vira um vídeo que dá vontade de assistir até o fim.
+        </p>
+        <p>
+          Se você já apoiou o celular em qualquer cantinho, gravou, apagou e pensou "ai, eu não
+          levo jeito pra isso"… vem cá, esse espaço também é seu! 😂
+        </p>
+        <p>
+          Criei essa seleção de formatos, roteiros e ganchos para você abrir, entender e pensar:
+          <span class="brush-accent">"Esse eu consigo fazer!"</span>
+        </p>
+        <p>
+          Quero te ajudar a mostrar o que você sabe, perder o medo de apertar o REC e
+          <span class="brush-accent">dar ao seu trabalho a chance de ser descoberto por mais pessoas.</span>
+        </p>
+        <p>
+          <strong>Porque você já tem algo para compartilhar. Vamos encontrar um jeito de fazer as
+          pessoas prestarem atenção?</strong> ✨
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEÇÃO 11: GARANTIA DE 7 DIAS -->
+  <section class="px-4 sm:px-6 py-10 sm:py-16">
+    <div class="max-w-xl mx-auto">
+      <div class="guarantee-panel py-10 px-8 md:py-12 md:px-12 flex flex-col items-center text-center">
+        <img
+          src="assets/garantia-selo.webp"
+          alt="Selo de garantia de 7 dias"
+          loading="lazy"
+          style="width: 170px; max-width: 45%; height: auto;"
+        />
+
+        <h2
+          class="font-nunito font-black text-clay-ink mt-7"
+          style="font-size: clamp(32px, 8.5vw, 38px); line-height: 1.15;"
+        >
+          Garantia de
+          <span class="headline-brush"><span class="headline-brush-text">7 Dias</span><svg class="headline-brush-svg" viewBox="0 0 100 16" preserveAspectRatio="none" aria-hidden="true"><path d="M1,10 C 9,4 20,1.5 34,1 C 50,0.5 64,1.5 75,3.5 C 82,5 87,6.5 90,7.5 C 93,8.5 95,8.8 96,7.5 C 96.8,6.5 96,5.5 94,5 C 97,7 98,10 95,13 C 89,16 72,16.8 54,15.8 C 36,14.8 16,13 1,10 Z" fill="url(#brushStrokeGrad)"/></svg></span>
+        </h2>
+
+        <div
+          class="text-clay-ink mt-6 space-y-4 mx-auto"
+          style="font-size: clamp(20px, 5.2vw, 22px); line-height: 1.5; max-width: 560px;"
+        >
+          <p>
+            Você tem 7 dias para conhecer os formatos, explorar os roteiros e decidir com
+            tranquilidade.
+          </p>
+          <p>
+            Se perceber que a oferta não é para você, solicite o reembolso dentro desse prazo e
+            receba <strong>100% do valor pago de volta</strong>.
+          </p>
+          <p style="font-weight: 600;">Sem precisar justificar sua decisão.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEÇÃO 12: FAQ -->
+  <section class="px-4 sm:px-6 py-10 sm:py-16">
+    <div class="max-w-2xl mx-auto space-y-8">
+      <h2
+        class="font-nunito font-black text-clay-ink text-center"
+        style="font-size: clamp(28px, 7.5vw, 34px); line-height: 1.2;"
+      >
+        Ainda ficou com alguma dúvida?
+      </h2>
+
+      <div class="space-y-3" id="faqList">
+        <div class="faq-item bg-white/80 shadow-clay-sm">
+          <button class="faq-trigger" type="button" aria-expanded="false" aria-controls="faq-panel-1" id="faq-trigger-1">
+            <span>O que vou receber ao comprar?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-panel" id="faq-panel-1" role="region" aria-labelledby="faq-trigger-1">
+            <p>
+              Você recebe os 100 Formatos Virais Validados, 112 roteiros prontos, 75 ganchos e os
+              três bônus: Plano de Estratégia, Arsenal de Ideias para 45 Nichos e Lucro no Direct.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item bg-white/80 shadow-clay-sm">
+          <button class="faq-trigger" type="button" aria-expanded="false" aria-controls="faq-panel-2" id="faq-trigger-2">
+            <span>Serve para o meu nicho?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-panel" id="faq-panel-2" role="region" aria-labelledby="faq-trigger-2">
+            <p>
+              Você pode adaptar os formatos ao assunto que já conhece e ao trabalho que oferece.
+              Os exemplos e as ideias para 45 nichos ajudam a entender como fazer essa adaptação.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item bg-white/80 shadow-clay-sm">
+          <button class="faq-trigger" type="button" aria-expanded="false" aria-controls="faq-panel-3" id="faq-trigger-3">
+            <span>Preciso ter experiência para começar?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-panel" id="faq-panel-3" role="region" aria-labelledby="faq-trigger-3">
+            <p>
+              Não. Você recebe exemplos, roteiros e um passo a passo para entender como aplicar os
+              formatos, mesmo que ainda esteja começando a criar conteúdo.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item bg-white/80 shadow-clay-sm">
+          <button class="faq-trigger" type="button" aria-expanded="false" aria-controls="faq-panel-4" id="faq-trigger-4">
+            <span>Preciso aparecer em todos os vídeos?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-panel" id="faq-panel-4" role="region" aria-labelledby="faq-trigger-4">
+            <p>
+              Não. Existem formatos em que você pode mostrar uma atividade, demonstrar algo ou
+              usar imagens e narração. Você escolhe os que se sentir mais confortável para gravar.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item bg-white/80 shadow-clay-sm">
+          <button class="faq-trigger" type="button" aria-expanded="false" aria-controls="faq-panel-5" id="faq-trigger-5">
+            <span>Preciso de câmera profissional?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-panel" id="faq-panel-5" role="region" aria-labelledby="faq-trigger-5">
+            <p>
+              Não. Você pode começar com o celular que já usa, um lugar iluminado e um apoio para
+              gravar.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item bg-white/80 shadow-clay-sm">
+          <button class="faq-trigger" type="button" aria-expanded="false" aria-controls="faq-panel-6" id="faq-trigger-6">
+            <span>Vou conseguir 10 mil seguidores em 14 dias?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-panel" id="faq-panel-6" role="region" aria-labelledby="faq-trigger-6">
+            <p>
+              Sim, é um método mais que validado! Porém o crescimento depende da aplicação, dos
+              conteúdos publicados e da resposta do público. Você recebe os formatos, os roteiros
+              e a estratégia para trabalhar nessa direção.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item bg-white/80 shadow-clay-sm">
+          <button class="faq-trigger" type="button" aria-expanded="false" aria-controls="faq-panel-7" id="faq-trigger-7">
+            <span>O pagamento é único ou mensal?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-panel" id="faq-panel-7" role="region" aria-labelledby="faq-trigger-7">
+            <p>
+              O pagamento é único. Não é uma assinatura e não há mensalidade para esta compra.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item bg-white/80 shadow-clay-sm">
+          <button class="faq-trigger" type="button" aria-expanded="false" aria-controls="faq-panel-8" id="faq-trigger-8">
+            <span>E se eu comprar e não gostar?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-panel" id="faq-panel-8" role="region" aria-labelledby="faq-trigger-8">
+            <p>
+              Você pode solicitar o reembolso em até 7 dias após a compra e receber 100% do valor
+              pago de volta.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script>
+  (function () {
+    const faqList = document.getElementById('faqList');
+    if (faqList) {
+      const items = Array.from(faqList.querySelectorAll('.faq-item'));
+      items.forEach((item) => {
+        const trigger = item.querySelector('.faq-trigger');
+        const icon = item.querySelector('.faq-icon');
+        trigger.addEventListener('click', () => {
+          const isOpen = item.classList.contains('is-open');
+          items.forEach((other) => {
+            other.classList.remove('is-open');
+            other.querySelector('.faq-trigger').setAttribute('aria-expanded', 'false');
+            other.querySelector('.faq-icon').textContent = '+';
+          });
+          if (!isOpen) {
+            item.classList.add('is-open');
+            trigger.setAttribute('aria-expanded', 'true');
+            icon.textContent = '−';
+          }
+        });
+      });
+    }
+  })();
+
+  (function () {
+    const root = document.getElementById('crvCarousel');
+    if (!root) return;
+
+    const track = document.getElementById('crvTrack');
+    const dotsWrap = document.getElementById('crvDots');
+    const prevBtn = root.querySelector('.crv-prev');
+    const nextBtn = root.querySelector('.crv-next');
+    const slides = Array.from(track.children);
+    const realCount = slides.length - 2; // minus the two clones
+    let index = 1; // start at first real slide
+    let autoplayTimer = null;
+    let resumeTimer = null;
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    for (let i = 0; i < realCount; i++) {
+      const dot = document.createElement('button');
+      dot.type = 'button';
+      dot.className = 'crv-dot';
+      dot.setAttribute('aria-label', 'Ir para o exemplo ' + (i + 1));
+      dot.addEventListener('click', () => {
+        goTo(i + 1);
+        restartAutoplayLater();
+      });
+      dotsWrap.appendChild(dot);
+    }
+    const dots = Array.from(dotsWrap.children);
+
+    function updateDots() {
+      const real = ((index - 1) + realCount) % realCount;
+      dots.forEach((d, i) => d.classList.toggle('is-active', i === real));
+    }
+
+    function render(animate) {
+      const target = slides[index];
+      const offset = target.offsetLeft;
+      track.style.transition = animate ? 'transform 800ms cubic-bezier(0.22, 0.61, 0.36, 1)' : 'none';
+      track.style.transform = 'translateX(-' + offset + 'px)';
+      updateDots();
+    }
+
+    function goTo(newIndex) {
+      index = newIndex;
+      render(true);
+    }
+
+    function next() {
+      goTo(index + 1);
+    }
+
+    function prev() {
+      goTo(index - 1);
+    }
+
+    track.addEventListener('transitionend', () => {
+      if (index === slides.length - 1) {
+        index = 1;
+        render(false);
+      } else if (index === 0) {
+        index = realCount;
+        render(false);
+      }
+    });
+
+    function startAutoplay() {
+      if (reducedMotion) return;
+      stopAutoplay();
+      autoplayTimer = setInterval(next, 6000);
+    }
+
+    function stopAutoplay() {
+      if (autoplayTimer) {
+        clearInterval(autoplayTimer);
+        autoplayTimer = null;
+      }
+    }
+
+    function restartAutoplayLater() {
+      stopAutoplay();
+      if (resumeTimer) clearTimeout(resumeTimer);
+      resumeTimer = setTimeout(startAutoplay, 4000);
+    }
+
+    prevBtn.addEventListener('click', () => {
+      prev();
+      restartAutoplayLater();
+    });
+    nextBtn.addEventListener('click', () => {
+      next();
+      restartAutoplayLater();
+    });
+
+    root.addEventListener('mouseenter', stopAutoplay);
+    root.addEventListener('mouseleave', startAutoplay);
+    root.addEventListener('focusin', stopAutoplay);
+    root.addEventListener('focusout', startAutoplay);
+
+    let touchStartX = 0;
+    let touchActive = false;
+    root.addEventListener('touchstart', (e) => {
+      touchStartX = e.touches[0].clientX;
+      touchActive = true;
+      stopAutoplay();
+    }, { passive: true });
+    root.addEventListener('touchend', (e) => {
+      if (!touchActive) return;
+      touchActive = false;
+      const deltaX = e.changedTouches[0].clientX - touchStartX;
+      if (Math.abs(deltaX) > 40) {
+        if (deltaX < 0) next(); else prev();
+      }
+      restartAutoplayLater();
+    });
+
+    window.addEventListener('resize', () => render(false));
+
+    render(false);
+    startAutoplay();
+  })();
+</script>
