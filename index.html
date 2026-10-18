@@ -563,7 +563,63 @@ src="https://www.facebook.com/tr?id=1143790018085926&ev=PageView&noscript=1"
     max-height: 500px;
     padding: 0 1.25rem 1.15rem;
   }
+
+  /* --- Barra fixa de urgência --- */
+  .top-bar {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+    padding: 0.7rem 1rem;
+    background: linear-gradient(180deg, #e2655a, #cc473c);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.18);
+    color: #fff;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800;
+    font-size: clamp(12px, 3.3vw, 15px);
+    text-align: center;
+    letter-spacing: 0.01em;
+  }
+
+  .top-bar-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 9999px;
+    background: #fff;
+    flex-shrink: 0;
+  }
+
+  /* --- Prova social: avatares + avaliação --- */
+  .social-proof-avatars {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .social-proof-avatars img {
+    width: 48px;
+    height: 48px;
+    border-radius: 9999px;
+    object-fit: cover;
+    border: 2.5px solid var(--clay-bg);
+    margin-left: -12px;
+    box-shadow: 0 2px 6px rgba(27, 20, 48, 0.15);
+  }
+
+  .social-proof-avatars img:first-child {
+    margin-left: 0;
+  }
 </style>
+
+<!-- Barra fixa de urgência -->
+<div class="top-bar">
+  <span class="top-bar-dot"></span>
+  DESCONTO DE 72% APENAS HOJE 18/10/2026
+</div>
 
 <!-- Background animated clay blobs (decorative only, no text) -->
 <div
@@ -612,7 +668,22 @@ src="https://www.facebook.com/tr?id=1143790018085926&ev=PageView&noscript=1"
       Receba +100 formatos virais validados prontos pra você copiar e colar no seu Perfil
       Profissional e alcançar seus primeiros 10 mil seguidores em apenas 14 dias.
     </p>
-    <a href="#bonus-exclusivos" class="hero-cta-btn mt-9">
+
+    <div class="flex flex-col items-center gap-3 mt-8">
+      <div class="social-proof-avatars">
+        <img src="assets/avatares/avatar-1.webp" alt="Aluna" loading="lazy" />
+        <img src="assets/avatares/avatar-2.webp" alt="Aluna" loading="lazy" />
+        <img src="assets/avatares/avatar-3.webp" alt="Aluna" loading="lazy" />
+        <img src="assets/avatares/avatar-4.jpg" alt="Aluna" loading="lazy" />
+        <img src="assets/avatares/avatar-5.jpg" alt="Aluna" loading="lazy" />
+      </div>
+      <p class="font-dmsans font-bold text-clay-ink" style="font-size: clamp(15px, 4vw, 17px);">
+        <span style="color: #f5a623; letter-spacing: 1px;">★★★★★</span>
+        +1.700 alunas usando
+      </p>
+    </div>
+
+    <a href="#bonus-exclusivos" class="hero-cta-btn mt-7">
       Quero receber os + 100 Formatos Virais
       <span class="hero-cta-arrow">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1207,12 +1278,20 @@ src="https://www.facebook.com/tr?id=1143790018085926&ev=PageView&noscript=1"
   <!-- SEÇÃO 7: CARROSSEL DEPOIMENTO CRV -->
   <section class="px-4 sm:px-6 py-10 sm:py-16">
     <div class="max-w-2xl mx-auto space-y-8">
-      <h2
-        class="font-nunito font-black text-clay-ink text-center"
-        style="font-size: clamp(28px, 7.5vw, 34px); line-height: 1.2;"
-      >
-        Veja como os formatos podem ser aplicados em diferentes nichos:
-      </h2>
+      <div class="text-center space-y-3">
+        <h2
+          class="font-nunito font-black text-clay-ink"
+          style="font-size: clamp(28px, 7.5vw, 34px); line-height: 1.2;"
+        >
+          Depoimento das nossas alunas
+        </h2>
+        <p
+          class="text-clay-ink-soft"
+          style="font-size: clamp(18px, 4.8vw, 20px); line-height: 1.4;"
+        >
+          Elas entraram, Aplicaram e tiveram sucesso!
+        </p>
+      </div>
 
       <div class="crv-carousel" id="crvCarousel">
         <div class="crv-viewport">
@@ -1228,9 +1307,6 @@ src="https://www.facebook.com/tr?id=1143790018085926&ev=PageView&noscript=1"
             </div>
             <div class="crv-slide">
               <img src="assets/crv/depoimento-3.png" alt="Exemplo ilustrativo de aplicação dos formatos de vídeo" loading="lazy" />
-            </div>
-            <div class="crv-slide">
-              <img src="assets/crv/depoimento-4.png" alt="Exemplo ilustrativo de aplicação dos formatos de vídeo" loading="lazy" />
             </div>
             <div class="crv-slide">
               <img src="assets/crv/depoimento-5.png" alt="Exemplo ilustrativo de aplicação dos formatos de vídeo" loading="lazy" />
